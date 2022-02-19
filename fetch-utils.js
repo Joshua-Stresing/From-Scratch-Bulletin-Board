@@ -3,6 +3,10 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+function checkError({ data, error }) {
+    return error ? console.error(error) : data;
+}
+
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
@@ -35,4 +39,14 @@ export async function logout() {
     await client.auth.signOut();
 
     return (window.location.href = '../');
+}
+
+export async function getPosts() {
+    const resp = await client.from('posts').select('*');
+    return checkError(resp);
+}
+
+export async function creatPosts(post) {
+    const resp = await client.from('posts').insert(post);
+    return checkError(resp);
 }

@@ -10,6 +10,7 @@ const signUpPassword = document.getElementById('sign-up-password');
 
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+
     const user = await signupUser(signUpEmail.value, signUpPassword.value);
 
     if (user) {
@@ -21,6 +22,7 @@ signUpForm.addEventListener('submit', async (event) => {
 
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+    
     const user = await signInUser(signInEmail.value, signInPassword.value);
 
     if (user) {
@@ -29,9 +31,6 @@ signInForm.addEventListener('submit', async (event) => {
         console.error(user);
     }
 });
-
-//transfer this over to main
-checkAuth();
 
 const logoutButton = document.getElementById('logout');
 
