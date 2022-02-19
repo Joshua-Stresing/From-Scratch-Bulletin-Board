@@ -1,5 +1,5 @@
 export function renderPost(post) {
-    const div = document.getElementById('div');
+    const div = document.createElement('div');
     div.classList.add('post');
 
     const h2 = document.createElement('p');
@@ -7,7 +7,7 @@ export function renderPost(post) {
 
     const p1 = document.createElement('p');
     p1.textContent = post.date;
-    
+
     const p2 = document.createElement('p');
     p2.textContent = post.info;
 

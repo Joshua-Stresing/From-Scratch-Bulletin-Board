@@ -31,9 +31,3 @@ signInForm.addEventListener('submit', async (event) => {
         console.error(user);
     }
 });
-
-const logoutButton = document.getElementById('logout');
-
-logoutButton.addEventListener('click', ()=> {
-    logout();  
-});
