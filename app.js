@@ -26,7 +26,7 @@ window.addEventListener('load', async () => {
     }
 
     createButton.addEventListener('click', () => {
-        location.replace('/create');
+        location.replace('/form');
     });
 
     const posts = await getPosts();

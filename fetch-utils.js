@@ -46,7 +46,7 @@ export async function getPosts() {
     return checkError(resp);
 }
 
-export async function creatPosts(post) {
+export async function createPosts(post) {
     const resp = await client.from('posts').insert(post);
     return checkError(resp);
 }

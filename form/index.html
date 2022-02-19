@@ -13,7 +13,38 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <h1> Create Post</h1>
+        <div id="nav">
+            <button id="logout">Logout</button>                
+            <button id="home">Home</button>                
+        </div>
+    </header>
+    <main>
+        <form id="post-it">
+            
+            <label for="name">
+                <div>Name</div>
+                <input type="text" name="name" id="name"/>
+            </label>
 
+            <label for="date">
+                <div>Date</div>
+                <input type="text" name="date" id="date"/>
+            </label>
+
+            <label for="info">
+                <div>Info</div>
+                <input type="text" name="info" id="info"/>
+            </label>
+
+            <label for="contact">
+                <div>Contact</div>
+                <input type="text" name="contact" id="contact"/>
+            </label>
+            <button>Save</button>
+        </form>
+    </main>
     <script type="module" src="./form.js"></script>
 </body>
 </html>
